@@ -1,4 +1,4 @@
-img2svg = function (input, output) {
+var img2svg  = function (input, output) {
 	(async () => {
 		const Potrace = require("./potrace.js");
 
