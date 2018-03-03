@@ -1,4 +1,6 @@
-var img2svg  = function (input, output) {
+const conf = require('./proc/conf');
+
+var img2svg = function (input, output) {
 	(async () => {
 		const Potrace = require("./potrace.js");
 
@@ -50,11 +52,9 @@ var img2svg  = function (input, output) {
 	})();
 }
 
-for (i = 1; i < 10000; i++) {
-	try {
-		img2svg("D:/cut/3_png/" + i + ".png", "D:/cut/4_svg/" + i + ".svg");
-	}
-	catch (e) {
-		print(i + "はエラー")
-	}
-}
+const fslist = require('./proc/fslist');
+fslist.fnames.map(f => {
+	console.log(conf.src + f + "=>" + conf.dst + f + ".svg");
+	img2svg(conf.src + f, conf.dst + f + ".svg");
+	// console.log(f + ".svgを作成！");
+});

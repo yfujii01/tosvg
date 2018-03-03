@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "configparser": "^0.1.5",
     "fs": "^0.0.1-security",
     "jimp": "^0.2.28"
   },
