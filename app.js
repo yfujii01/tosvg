@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-var files = require('./lib/files');
 var fs = require("fs");
 
 var img2svg = function (input, output) {
