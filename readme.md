@@ -4,6 +4,8 @@
 ---
 This cli tool converts jpg and png files to svg
 
+https://www.npmjs.com/package/tosvg
+
 ## Installation
 ---
 
