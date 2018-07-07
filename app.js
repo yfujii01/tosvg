@@ -1,3 +1,8 @@
+#!/usr/bin/env node
+
+var files = require('./lib/files');
+var fs = require("fs");
+
 var img2svg = function (input, output) {
 	(async () => {
 		const Potrace = require("./potrace.js");
@@ -45,7 +50,6 @@ var img2svg = function (input, output) {
 		//output
 		//process.stdout.write(svg);
 
-		var fs = require("fs");
 		fs.writeFileSync(output, svg);
 	})();
 }

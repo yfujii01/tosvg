@@ -2,24 +2,14 @@
   "name": "img2svg",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "bin": {
+    "tosvg": "app.js"
+  },
   "dependencies": {
     "configparser": "^0.1.5",
     "fs": "^0.0.1-security",
     "jimp": "^0.2.28"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/yfujii01/Img2SVG.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/yfujii01/Img2SVG/issues"
-  },
-  "homepage": "https://gitlab.com/yfujii01/Img2SVG#README"
+  "license": "ISC"
 }
