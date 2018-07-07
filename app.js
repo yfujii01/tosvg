@@ -1,5 +1,3 @@
-const conf = require('./proc/conf');
-
 var img2svg = function (input, output) {
 	(async () => {
 		const Potrace = require("./potrace.js");
@@ -48,13 +46,18 @@ var img2svg = function (input, output) {
 		//process.stdout.write(svg);
 
 		var fs = require("fs");
-		fs.writeFile(output, svg);
+		fs.writeFileSync(output, svg);
 	})();
 }
 
-const fslist = require('./proc/fslist');
-fslist.fnames.map(f => {
-	console.log(conf.src + f + "=>" + conf.dst + f + ".svg");
-	img2svg(conf.src + f, conf.dst + f + ".svg");
-	// console.log(f + ".svgを作成！");
-});
+if (process.argv.length < 4) {
+	console.log("no argument!no action!");
+	console.log("(example)");
+	console.log("in.jpg out.svg");
+	return;
+}
+var inFile = process.argv[2];
+var outFile = process.argv[3];
+console.log(inFile + "=>" + outFile);
+img2svg(inFile, outFile);
+// console.log(f + ".svgを作成！");
