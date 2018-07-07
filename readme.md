@@ -25,13 +25,6 @@ $ cd ~/.tosvg
 $ make
 ```
 
-
-### If you are using "nodenv" you may need to type "nodenv rehash" command
-
-```
-$ nodenv rehash
-```
-
 ## Usage
 
 ```
